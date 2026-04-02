@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Unidades Orgánicas - DTI UAC</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap 5, Fuentes e Iconos -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    
+    <!-- Lordicon -->
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+
+    <style>
+        :root {
+            --azul-uac: #003087;
+            --dorado: #c8a84b;
+            --glass-bg: rgba(255, 255, 255, 0.7);
+        }
+
+        body { font-family: 'Poppins', sans-serif; background-color: #f0f4f8; }
+
+        .navbar-main {
+            background: rgba(0, 48, 135, 0.95) !important;
+            backdrop-filter: blur(10px);
+            position: sticky; top: 0; z-index: 1000;
+        }
+
+        /* Glassmorphism para las tarjetas de puestos */
+        .puesto-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 20px;
+            transition: 0.3s;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        .puesto-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 48, 135, 0.1);
+        }
+
+        .unidad-sidebar {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .unidad-link {
+            color: #444;
+            text-decoration: none;
+            display: block;
+            padding: 10px 0;
+            transition: 0.3s;
+            font-weight: 500;
+        }
+
+        .unidad-link:hover, .unidad-link.active {
+            color: var(--azul-uac);
+            padding-left: 10px;
+        }
+
+        .badge-puesto {
+            background: rgba(0, 48, 135, 0.1);
+            color: var(--azul-uac);
+            font-size: 0.7rem;
+            padding: 5px 12px;
+            border-radius: 50px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Nav -->
+    <nav class="navbar navbar-expand-lg d-none d-lg-block text-white" style="background: var(--azul-uac); font-size: 0.8rem;">
+        <div class="container d-flex justify-content-between">
+            <div><i class="fa fa-envelope me-2"></i> dti@uandina.edu.pe</div>
+            <div><i class="fa fa-phone me-2"></i> (084) 605-000</div>
+        </div>
+    </nav>
+
+    <!-- Navbar Principal -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-main shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-microchip me-2" style="color: var(--dorado);"></i>DTI UAC
+            </a>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="unidades.html">Unidades Orgánicas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="soporte.html">Soporte</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <div class="container py-5">
+        <div class="row">
+
+            <!-- Sidebar (Categorías de Unidades del MOF) -->
+            <div class="col-lg-3 mb-4">
+                <div class="unidad-sidebar">
+                    <h4 class="fw-bold mb-4" style="color: var(--azul-uac);">Unidades</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="unidad-link active border-bottom">Órgano de Dirección</a></li>
+                        <li><a href="#" class="unidad-link border-bottom">Desarrollo de Proyectos</a></li>
+                        <li><a href="#" class="unidad-link border-bottom">Diseño y Programación</a></li>
+                        <li><a href="#" class="unidad-link">Producción y Soporte</a></li>
+                    </ul>
+                    <div class="mt-4 p-3 rounded-4" style="background: var(--azul-uac); color: white;">
+                        <small>Total Plazas: <strong>12</strong></small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Listado de Puestos (Grid de Productos adaptado) -->
+            <div class="col-lg-9">
+                <div class="row mb-4">
+                    <div class="col-md-12">
+                        <h3 class="fw-bold">Estructura de Puestos</h3>
+                        <p class="text-muted">Personal especializado según el Manual de Organización y Funciones.</p>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Puesto 1: Director -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="puesto-card p-4">
+                            <div class="text-center mb-3">
+                                <lord-icon src="https://cdn.lordicon.com/dxjqoygy.json" trigger="hover" style="width:70px;height:70px"></lord-icon>
+                            </div>
+                            <span class="badge-puesto">DIRECCIÓN</span>
+                            <h5 class="fw-bold mt-2">Director de Tecnologías</h5>
+                            <p class="small text-muted">Responsable de planificar y dirigir las acciones estratégicas de TI.</p>
+                            <hr>
+                            <small class="text-primary fw-bold">1 Plaza (COP)</small>
+                        </div>
+                    </div>
+
+                    <!-- Puesto 2: Desarrollo -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="puesto-card p-4">
+                            <div class="text-center mb-3">
+                                <lord-icon src="https://cdn.lordicon.com/fpipqvgu.json" trigger="hover" style="width:70px;height:70px"></lord-icon>
+                            </div>
+                            <span class="badge-puesto">PROYECTOS</span>
+                            <h5 class="fw-bold mt-2">Jefe de Unidad Proyectos</h5>
+                            <p class="small text-muted">Dirige la formulación del Plan Estratégico y Proyectos Institucionales.</p>
+                            <hr>
+                            <small class="text-primary fw-bold">1 Plaza (COP)</small>
+                        </div>
+                    </div>
+
+                    <!-- Puesto 3: Diseño -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="puesto-card p-4">
+                            <div class="text-center mb-3">
+                                <lord-icon src="https://cdn.lordicon.com/qhgubeis.json" trigger="hover" style="width:70px;height:70px"></lord-icon>
+                            </div>
+                            <span class="badge-puesto">DISEÑO</span>
+                            <h5 class="fw-bold mt-2">Jefe de Diseño y Prog.</h5>
+                            <p class="small text-muted">Gestiona el cambio de configuración, versiones y calidad de software.</p>
+                            <hr>
+                            <small class="text-primary fw-bold">1 Plaza (COP)</small>
+                        </div>
+                    </div>
+
+                    <!-- Puesto 4: Especialista Web -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="puesto-card p-4">
+                            <div class="text-center mb-3">
+                                <lord-icon src="https://cdn.lordicon.com/vhyenxsy.json" trigger="hover" style="width:70px;height:70px"></lord-icon>
+                            </div>
+                            <span class="badge-puesto">DISEÑO</span>
+                            <h5 class="fw-bold mt-2">Esp. Web y Redes</h5>
+                            <p class="small text-muted">Administra el sitio web y contenido digital de la universidad.</p>
+                            <hr>
+                            <small class="text-primary fw-bold">1 Plaza (COP)</small>
+                        </div>
+                    </div>
+
+                    <!-- Puesto 5: Soporte -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="puesto-card p-4">
+                            <div class="text-center mb-3">
+                                <lord-icon src="https://cdn.lordicon.com/bbnkwdur.json" trigger="hover" style="width:70px;height:70px"></lord-icon>
+                            </div>
+                            <span class="badge-puesto">PRODUCCIÓN</span>
+                            <h5 class="fw-bold mt-2">Jefe de Soporte Info.</h5>
+                            <p class="small text-muted">Administra el Centro de Datos y la infraestructura tecnológica.</p>
+                            <hr>
+                            <small class="text-primary fw-bold">1 Plaza (COP)</small>
+                        </div>
+                    </div>
+
+                    <!-- Puesto 6: E-Learning -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="puesto-card p-4">
+                            <div class="text-center mb-3">
+                                <lord-icon src="https://cdn.lordicon.com/hjgsuisq.json" trigger="hover" style="width:70px;height:70px"></lord-icon>
+                            </div>
+                            <span class="badge-puesto">PRODUCCIÓN</span>
+                            <h5 class="fw-bold mt-2">Esp. Plataforma Virtual</h5>
+                            <p class="small text-muted">Gestiona los contenidos y cursos de la plataforma E-Learning.</p>
+                            <hr>
+                            <small class="text-primary fw-bold">1 Plaza (COP)</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paginación Institucional -->
+                <div class="row mt-5">
+                    <ul class="pagination pagination-lg justify-content-end">
+                        <li class="page-item disabled">
+                            <a class="page-link active rounded-pill px-4 shadow-sm border-0" href="#">1</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link rounded-pill px-4 shadow-sm border-0 ms-2 text-dark" href="#">2</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-4 text-white" style="background: #0b132b;">
+        <div class="container text-center">
+            <p class="small opacity-75 mb-0">DTI - Universidad Andina del Cusco</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

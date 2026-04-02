@@ -1,3 +1,40 @@
 /*
 Custom Css
 */
+/* Colores Institucionales UAC */
+:root {
+    --uac-blue: #003087;
+    --uac-gold: #c8a84b;
+    --glass-bg: rgba(255, 255, 255, 0.15);
+    --glass-border: rgba(255, 255, 255, 0.25);
+}
+
+/* Efecto Glassmorphism */
+.glass-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 48, 135, 0.2);
+}
+
+/* Ajustes Generales */
+body {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.text-uac { color: var(--uac-blue) !important; }
+.bg-uac { background-color: var(--uac-blue) !important; }
+.btn-uac {
+    background-color: var(--uac-gold);
+    color: white;
+    border-radius: 50px;
+    padding: 10px 25px;
+    border: none;
+}

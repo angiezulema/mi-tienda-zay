@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Soporte Técnico - DTI UAC</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap 5, Fuentes e Iconos -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <!-- Leaflet para el Mapa (Librería ligera de mapas) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <!-- Lordicon -->
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+
+    <style>
+        :root {
+            --azul-uac: #003087;
+            --dorado: #c8a84b;
+        }
+
+        body { font-family: 'Poppins', sans-serif; background-color: #f4f7f9; }
+
+        .navbar-main {
+            background: rgba(0, 48, 135, 0.95) !important;
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Glassmorphism para el Formulario */
+        .glass-form {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .btn-uac {
+            background: var(--azul-uac);
+            color: white;
+            border-radius: 50px;
+            padding: 12px 30px;
+            border: none;
+            transition: 0.3s;
+        }
+
+        .btn-uac:hover {
+            background: var(--dorado);
+            transform: scale(1.05);
+            color: var(--azul-uac);
+        }
+
+        #mapid {
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            margin-bottom: -50px;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Nav -->
+    <nav class="navbar navbar-expand-lg d-none d-lg-block text-white" style="background: var(--azul-uac); font-size: 0.8rem;">
+        <div class="container d-flex justify-content-between">
+            <div><i class="fa fa-envelope me-2"></i> soporte_dti@uandina.edu.pe</div>
+            <div><i class="fa fa-phone me-2"></i> Anexo 1234</div>
+        </div>
+    </nav>
+
+    <!-- Navbar Principal -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-main shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-microchip me-2" style="color: var(--dorado);"></i>DTI UAC
+            </a>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="unidades.html">Unidades Orgánicas</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="soporte.html">Soporte</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header de Página -->
+    <div class="container-fluid bg-white py-5">
+        <div class="col-md-6 m-auto text-center">
+            <lord-icon src="https://cdn.lordicon.com/tftfrqun.json" trigger="loop" colors="primary:#003087,secondary:#c8a84b" style="width:100px;height:100px"></lord-icon>
+            <h1 class="h1 fw-bold" style="color: var(--azul-uac);">Centro de Soporte (Mesa de Servicio)</h1>
+            <p class="text-muted">
+                ¿Tienes problemas con tu correo, plataforma o red? Estamos para ayudarte. 
+                Envía un ticket de atención.
+            </p>
+        </div>
+    </div>
+
+    <!-- Sección Mapa (Ubicación real UAC Larapa) -->
+    <div class="container">
+        <div id="mapid" style="width: 100%; height: 400px;"></div>
+    </div>
+
+    <!-- Script del Mapa -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        // Coordenadas aproximadas de la UAC Larapa, Cusco
+        var lat = -13.52264;
+        var lng = -71.90112;
+        var mymap = L.map('mapid').setView([lat, lng], 16);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(mymap);
+
+        L.marker([lat, lng]).addTo(mymap)
+            .bindPopup("<b>DTI - UAC</b><br />Sede Larapa, Cusco.").openPopup();
+    </script>
+
+    <!-- Formulario de Contacto / Tickets -->
+    <div class="container py-5 mt-5">
+        <div class="row py-5">
+            <form class="col-md-9 m-auto glass-form p-5" method="post">
+                <div class="row">
+                    <div class="form-group col-md-6 mb-3">
+                        <label class="fw-bold mb-2">Nombre Completo / Código</label>
+                        <input type="text" class="form-control" id="name" placeholder="Ej. Juan Perez / 015100...">
+                    </div>
+                    <div class="form-group col-md-6 mb-3">
+                        <label class="fw-bold mb-2">Correo Institucional</label>
+                        <input type="email" class="form-control" id="email" placeholder="@uandina.edu.pe">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="fw-bold mb-2">Tipo de Incidencia</label>
+                    <select class="form-control">
+                        <option>Problemas con Correo @uandina</option>
+                        <option>Acceso a ERP / Aula Virtual</option>
+                        <option>Soporte de Red / Wi-Fi</option>
+                        <option>Mantenimiento de Equipo</option>
+                        <option>Otro</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="fw-bold mb-2">Descripción del Problema</label>
+                    <textarea class="form-control" id="message" placeholder="Describe brevemente lo ocurrido..." rows="6"></textarea>
+                </div>
+                <div class="row">
+                    <div class="col text-center mt-3">
+                        <button type="submit" class="btn-uac px-5 fw-bold">Enviar Ticket de Ayuda</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-4 text-white mt-5" style="background: #0b132b;">
+        <div class="container text-center">
+            <p class="small opacity-75">Dirección de Tecnologías de Información - UAC</p>
+            <p class="small opacity-50">Cusco, Perú - 2024</p>
+        </div>
+    </footer>
+
+    <!-- Scripts de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

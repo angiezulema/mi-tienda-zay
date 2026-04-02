@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Nosotros - DTI UAC</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap 5 y Estilos -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    
+    <!-- Lordicon -->
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+
+    <style>
+        :root {
+            --azul-uac: #003087;
+            --dorado: #c8a84b;
+            --glass: rgba(255, 255, 255, 0.15);
+        }
+
+        body { font-family: 'Poppins', sans-serif; background-color: #f8f9fa; }
+
+        /* Glassmorphism Effect */
+        .glass-overlay {
+            background: rgba(0, 48, 135, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .navbar-main {
+            background: rgba(0, 48, 135, 0.95) !important;
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .services-icon-wap:hover {
+            background: #ffffff !important;
+            transform: translateY(-10px);
+            transition: 0.4s;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .brand-img { filter: grayscale(100%); opacity: 0.6; transition: 0.3s; }
+        .brand-img:hover { filter: grayscale(0%); opacity: 1; }
+    </style>
+</head>
+
+<body>
+    <!-- Top Nav (Igual al index) -->
+    <nav class="navbar navbar-expand-lg d-none d-lg-block text-white" style="background: var(--azul-uac); font-size: 0.8rem;">
+        <div class="container d-flex justify-content-between">
+            <div><i class="fa fa-envelope me-2"></i> dti@uandina.edu.pe</div>
+            <div><i class="fa fa-phone me-2"></i> (084) 605-000</div>
+        </div>
+    </nav>
+
+    <!-- Header / Navbar Principal -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-main shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-microchip me-2" style="color: var(--dorado);"></i>DTI UAC
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="nosotros.html">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="unidades.html">Unidades Orgánicas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="soporte.html">Soporte</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner "About Us" adaptado a la DTI -->
+    <section class="py-5" style="background: linear-gradient(rgba(0,48,135,0.8), rgba(0,48,135,0.8)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069') center/cover;">
+        <div class="container">
+            <div class="row align-items-center py-5">
+                <div class="col-md-8 text-white">
+                    <h1 class="display-4 fw-bold">Sobre Nosotros</h1>
+                    <p class="lead">
+                        La Dirección de Tecnologías de Información (DTI) es el órgano responsable de planificar, organizar y controlar las acciones estratégicas de los servicios informáticos que impulsan el desarrollo institucional de la Universidad Andina del Cusco.
+                    </p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <lord-icon src="https://cdn.lordicon.com/nobciafz.json" trigger="loop" colors="primary:#ffffff,secondary:#c8a84b" style="width:200px;height:200px"></lord-icon>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Propósito y Valores (Sección "Our Services" de la plantilla) -->
+    <section class="container py-5">
+        <div class="row text-center pt-5 pb-3">
+            <div class="col-lg-6 m-auto">
+                <h1 class="h1 fw-bold" style="color: var(--azul-uac);">Nuestro Propósito</h1>
+                <p class="text-muted">Guiados por la excelencia y la innovación tecnológica.</p>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Card 1: Misión -->
+            <div class="col-md-6 col-lg-3 pb-5">
+                <div class="h-100 py-5 services-icon-wap shadow-sm border-0 rounded-4 text-center">
+                    <div class="h1"><lord-icon src="https://cdn.lordicon.com/hjgsuisq.json" trigger="hover" style="width:70px;height:70px"></lord-icon></div>
+                    <h2 class="h5 mt-4 fw-bold">Misión</h2>
+                    <p class="px-3 small">Proporcionar soluciones tecnológicas integrales que soporten la academia y administración.</p>
+                </div>
+            </div>
+
+            <!-- Card 2: Visión -->
+            <div class="col-md-6 col-lg-3 pb-5">
+                <div class="h-100 py-5 services-icon-wap shadow-sm border-0 rounded-4 text-center">
+                    <div class="h1"><lord-icon src="https://cdn.lordicon.com/miitfioz.json" trigger="hover" style="width:70px;height:70px"></lord-icon></div>
+                    <h2 class="h5 mt-4 fw-bold">Visión</h2>
+                    <p class="px-3 small">Ser referentes en transformación digital universitaria a nivel nacional.</p>
+                </div>
+            </div>
+
+            <!-- Card 3: Calidad -->
+            <div class="col-md-6 col-lg-3 pb-5">
+                <div class="h-100 py-5 services-icon-wap shadow-sm border-0 rounded-4 text-center">
+                    <div class="h1"><lord-icon src="https://cdn.lordicon.com/uwinunog.json" trigger="hover" style="width:70px;height:70px"></lord-icon></div>
+                    <h2 class="h5 mt-4 fw-bold">Gestión</h2>
+                    <p class="px-3 small">Administrar eficientemente los recursos informáticos y la seguridad de datos.</p>
+                </div>
+            </div>
+
+            <!-- Card 4: Soporte -->
+            <div class="col-md-6 col-lg-3 pb-5">
+                <div class="h-100 py-5 services-icon-wap shadow-sm border-0 rounded-4 text-center">
+                    <div class="h1"><lord-icon src="https://cdn.lordicon.com/vhyenxsy.json" trigger="hover" style="width:70px;height:70px"></lord-icon></div>
+                    <h2 class="h5 mt-4 fw-bold">Continuidad</h2>
+                    <p class="px-3 small">Garantizar la operatividad de los sistemas 24/7 para toda la UAC.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Alianzas / Tecnología (Sección "Our Brands" de la plantilla) -->
+    <section class="bg-light py-5">
+        <div class="container my-4">
+            <div class="row text-center py-3">
+                <div class="col-lg-6 m-auto">
+                    <h1 class="h1 fw-bold" style="color: var(--azul-uac);">Tecnologías que usamos</h1>
+                    <p class="text-muted">Trabajamos con estándares internacionales y herramientas de vanguardia.</p>
+                </div>
+                <div class="col-lg-9 m-auto">
+                    <div class="row d-flex justify-content-center align-items-center gap-5">
+                        <!-- Sustituye con logos reales o iconos representativos -->
+                        <div class="col-2"><i class="fab fa-aws fa-3x brand-img"></i></div>
+                        <div class="col-2"><i class="fab fa-google fa-3x brand-img"></i></div>
+                        <div class="col-2"><i class="fab fa-microsoft fa-3x brand-img"></i></div>
+                        <div class="col-2"><i class="fab fa-linux fa-3x brand-img"></i></div>
+                        <div class="col-2"><i class="fab fa-docker fa-3x brand-img"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Consistente con el index) -->
+    <footer class="py-5 text-white" style="background: #0b132b;">
+        <div class="container text-center">
+            <p class="small opacity-75 mb-0">Dirección de Tecnologías de Información - UAC</p>
+            <p class="small opacity-50">Cusco, Perú - 2024</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
